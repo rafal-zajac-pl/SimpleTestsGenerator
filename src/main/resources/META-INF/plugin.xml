@@ -14,8 +14,8 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Simple test generator for Spring Boot<br>
+    <em>/em>
   ]]></description>
 
     <!-- Product and plugin compatibility requirements.
@@ -27,4 +27,12 @@
     <extensions defaultExtensionNs="com.intellij">
 
     </extensions>
+    <actions>
+        <action id="SimpleTestGenerator"
+                class="com.example.simpletestsgenerator.PopupDialogAction"
+                text="Generate test"
+                description="Generate unit test for controller">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
